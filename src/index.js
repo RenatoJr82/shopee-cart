@@ -12,8 +12,11 @@ const item2 = await createItem("teclado mecânico", 157.73, 4);
 await cartService.addItem(cart, item1);
 await cartService.addItem(cart, item2);
 
-//deletando item 
-await cartService.deleteItem(cart, item2.name);
+//Exibindo a lista de itens do carrinho
+await cartService.displayCart(cart);
 
-console.log("Shopee Cart TOTAL IS:");
+//deletando item 
+//await cartService.deleteItem(cart, item2.name);
+
+console.log("Total do seu carrinho da Shopee é:");
 await cartService.calculateTotal(cart);

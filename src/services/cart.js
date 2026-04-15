@@ -25,9 +25,18 @@ async function calculateTotal(userCart) {
     console.log (userCart.reduce((total, item) => total + item.subtotal(), 0));
 }
 
+// função de Display que mostra os itens que estão no carrinho
+async function displayCart(userCart) {
+    console.log("Lista do carrinho da Shopee:")
+    userCart.forEach((item, index) => {
+        console.log(`${index + 1}. ${item.name} - R$ ${item.price} | ${item.quantity}x | Subtotal R$ ${item.subtotal()}`);
+    });
+}
+
 export {
     addItem,
     calculateTotal,
     deleteItem,
-    removeItem
+    removeItem,
+    displayCart
 }
