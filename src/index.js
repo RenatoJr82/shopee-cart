@@ -12,6 +12,8 @@ const item2 = await createItem("teclado mecânico", 157.73, 4);
 await cartService.addItem(cart, item1);
 await cartService.addItem(cart, item2);
 
+await cartService.removeItem(cart, 1)
+
 //Exibindo a lista de itens do carrinho
 await cartService.displayCart(cart);
 
